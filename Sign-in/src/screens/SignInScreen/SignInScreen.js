@@ -2,11 +2,22 @@ import React, {useState} from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 import LOGO from '../../../assets/LOGO.png';
 import CustomInput from '../../components/CustomInput';
+import CutomButton from '../../components/CustomButton';
 
 const SignInScreen = () => {
 
     const [userName, setUsername] = useState('');
     const [Password, setPassword] = useState('');
+
+
+    const onSigninPressed = () =>{
+        console.warn("Pressed on SignIn")
+    }
+
+    const onForgetPasswordPressed = () =>{
+        console.warn("Pressed on Forget Password")
+    }
+    
   return (
     <View>
         <View style={styles.root} >
@@ -23,6 +34,21 @@ const SignInScreen = () => {
             setValue={setPassword}
             secureTextEntry={true}
             />
+            <CutomButton
+            text="Sign In"
+            onPress={onSigninPressed}
+            type="PRIMARY"
+            />
+            <CutomButton
+            text="Forget Password ?"
+            onPress={onForgetPasswordPressed}
+            type="TERTIARY"
+            />
+            <CutomButton
+            text="Sign In with Google"
+            />
+
+
 
         </View>
     </View>
