@@ -1,17 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 import LOGO from '../../../assets/LOGO.png';
 import CustomInput from '../../components/CustomInput';
 
 const SignInScreen = () => {
+
+    const [userName, setUsername] = useState('');
+    const [Password, setPassword] = useState('');
   return (
     <View>
         <View style={styles.root} >
             <Image source={LOGO} style={styles.logo}/>
-        </View>
 
-        <View>
-            <CustomInput/>
+            <CustomInput 
+            placeholder="User Name"
+            value={userName}
+            setValue={setUsername}
+            />
+            <CustomInput 
+            placeholder="Password"
+            value={Password}
+            setValue={setPassword}
+            secureTextEntry={true}
+            />
+
         </View>
     </View>
   );
