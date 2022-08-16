@@ -17,6 +17,21 @@ const SignInScreen = () => {
     const onForgetPasswordPressed = () =>{
         console.warn("Pressed on Forget Password")
     }
+
+    const onGooglePressed = () =>{
+        console.warn("Pressed on Google")
+    }
+
+    const onFacebookPressed = () =>{
+        console.warn("Pressed on Facebook")
+    }
+
+    const onApplePressed = () =>{
+        console.warn("Pressed on Apple")
+    }
+    const onCreateOnePressed = () =>{
+        console.warn("Pressed on Create One")
+    }
     
   return (
     <View>
@@ -46,6 +61,27 @@ const SignInScreen = () => {
             />
             <CutomButton
             text="Sign In with Google"
+            onPress={onGooglePressed}
+            fontcolor= '#DD4D44'
+            bgcolor= '#FAE9EA'
+            />
+            <CutomButton
+            text="Sign In with Facebook"
+            onPress={onFacebookPressed}
+            fontcolor= '#4765A9'
+            bgcolor= '#E7EAF4'
+            />
+            <CutomButton
+            text="Sign In with Apple"
+            onPress={onApplePressed}
+            fontcolor= '#363636'
+            bgcolor= '#e3e3e3'
+            />
+            <CutomButton
+            text="don't you have an account? create one"
+            onPress={onCreateOnePressed}
+            type="TERTIARY"
+            fontcolor='#929292'
             />
 
 

@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
 container: {
     backgroundColor: '#0C1CE2',
     width: '90%',
-    height: '10%',
+    height: 50,
     justifyContent:'center',
     alignItems: 'center',
     marginVertical: 2
@@ -30,7 +30,7 @@ container_PRIMARY: {
     borderWidth: 1,
     borderColor: '#D5D2D2',
     width: '90%',
-    height: '10%',
+    height: 50,
     justifyContent:'center',
     alignItems: 'center',
     marginVertical: 2
@@ -38,7 +38,7 @@ container_PRIMARY: {
 container_TERTIARY: {
     backgroundColor: '#CECCCC',
     width: '90%',
-    height: '10%',
+    height: 50,
     justifyContent:'center',
     alignItems: 'center',
     marginVertical: 2
