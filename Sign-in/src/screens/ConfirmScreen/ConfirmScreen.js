@@ -26,12 +26,12 @@ const ConfirmScreen = () => {
   return (
     <View>
         <View style={styles.root}>
-            <Text style={styles.title}>Confirm Sign UP</Text>
+            <Text style={styles.title}>Confirm Sign Up</Text>
 
             <CustomInput 
             placeholder="Enter your E-Mail"
-            value={code}
-            setValue={setcode}
+            value={userName}
+            setValue={setUsername}
             />
 
             <CustomInput 
