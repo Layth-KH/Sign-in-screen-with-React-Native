@@ -35,6 +35,11 @@ container_PRIMARY: {
     alignItems: 'center',
     marginVertical: 2
 },
+container_SECONDARY:{
+  borderColor: '#3B71F3',
+  borderWidth:2,
+  borderRadius: 10,
+},
 container_TERTIARY: {
     backgroundColor: '#CECCCC',
     width: '90%',
