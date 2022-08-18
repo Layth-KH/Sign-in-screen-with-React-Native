@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { Text, View, StyleSheet, Image, Pressable } from 'react-native';
 import CustomInput from '../../components/CustomInput';
 import CutomButton from '../../components/CustomButton';
+import { useNavigation } from '@react-navigation/native';
 
 const SignUpScreen = () => {
 
@@ -9,11 +10,13 @@ const SignUpScreen = () => {
     const [EMail, setEMail] = useState('');
     const [RepeatPassword, setRepeatPassword] = useState('');
     const [Password, setPassword] = useState('');
-
-
+    
+    const navigation = useNavigation();
 
     const onRegisterPressed = () =>{
-        console.warn("Pressed on Register")
+        console.warn("Pressed on Register");
+
+        navigation.navigate('Confirm');
     }
 
     const onGooglePressed = () =>{
@@ -37,7 +40,8 @@ const SignUpScreen = () => {
     }
 
     const onSignInPressed = () =>{
-        console.warn("Pressed on Sign in")
+        console.warn("Pressed on Sign in");
+        navigation.navigate('SignIn');
     }
     
   return (

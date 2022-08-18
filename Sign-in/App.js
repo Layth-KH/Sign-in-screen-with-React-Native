@@ -1,15 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import SignInScreen from './src/screens/SignInScreen';
-import SignUpScreen from './src/screens/SignUpScreen';
-import ConfirmScreen from './src/screens/ConfirmScreen';
+import Navigation from './src/navigation';
+
 
 
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <ConfirmScreen/>
+      <Navigation/>
       <StatusBar style="auto" />
     </View>
   );

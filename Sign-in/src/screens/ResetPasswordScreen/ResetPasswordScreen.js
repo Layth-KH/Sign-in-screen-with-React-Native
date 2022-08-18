@@ -2,20 +2,19 @@ import React, {useState} from 'react';
 import { Text, View, StyleSheet, Image, Pressable } from 'react-native';
 import CustomInput from '../../components/CustomInput';
 import CutomButton from '../../components/CustomButton';
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native';
 
-const ConfirmScreen = () => {
+const ResetPasswordScreen = () => {
 
-    const [EMail, setEMail] = useState('');
+    const [Newpassword, setNewPassword] = useState('');
     const [code, setcode] = useState('');
 
     const navigation = useNavigation();
 
 
 
-
-    const onConfirmPressed = () =>{
-        console.warn("Pressed on Confirm");
+    const onSubmitPressed = () =>{
+        console.warn("Pressed on Submit");
         navigation.navigate('Home');
     }
 
@@ -24,39 +23,30 @@ const ConfirmScreen = () => {
         navigation.navigate('SignIn');
     }
     
-    const onResendPressed = () =>{
-        console.warn("Pressed on resend");
-    }
 
     
   return (
     <View>
         <View style={styles.root}>
-            <Text style={styles.title}>Confirm Sign Up</Text>
+            <Text style={styles.title}>Reset your password</Text>
 
             <CustomInput 
-            placeholder="Enter your E-Mail"
-            value={EMail}
-            setValue={setEMail}
-            />
-
-            <CustomInput 
-            placeholder="Enter the Code"
+            placeholder="Enter your confirmation code"
             value={code}
             setValue={setcode}
             />
+
+            <CustomInput 
+            placeholder="Enter your new password"
+            value={Newpassword}
+            setValue={setNewPassword}
+            />
             <CutomButton
-            text="Confirm"
-            onPress={onConfirmPressed}
+            text="Submit"
+            onPress={onSubmitPressed}
             type="PRIMARY"
             />
-            <CutomButton
-            text="Resend"
-            onPress={onResendPressed}
-            type="SECONDARY"
-            fontcolor= "#6C6C6C"
-            bgcolor="#CECCCC"
-            />
+            
             <CutomButton
             text="Back to Sign In"
             onPress={onBacktoSigninPressed}
@@ -103,4 +93,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default ConfirmScreen;
+export default ResetPasswordScreen;

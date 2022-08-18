@@ -3,34 +3,42 @@ import { Text, View, StyleSheet, Image } from 'react-native';
 import LOGO from '../../../assets/LOGO.png';
 import CustomInput from '../../components/CustomInput';
 import CutomButton from '../../components/CustomButton';
+import { useNavigation } from '@react-navigation/native';
 
 const SignInScreen = () => {
 
     const [userName, setUsername] = useState('');
     const [Password, setPassword] = useState('');
 
+    const navigation = useNavigation();
+
 
     const onSigninPressed = () =>{
-        console.warn("Pressed on SignIn")
+        console.warn("Pressed on SignIn");
+
+        navigation.navigate('Home');
     }
 
     const onForgetPasswordPressed = () =>{
-        console.warn("Pressed on Forget Password")
+        console.warn("Pressed on Forget Password");
+
+        navigation.navigate('ForgetPassword');
     }
 
     const onGooglePressed = () =>{
-        console.warn("Pressed on Google")
+        console.warn("Pressed on Google");
     }
 
     const onFacebookPressed = () =>{
-        console.warn("Pressed on Facebook")
+        console.warn("Pressed on Facebook");
     }
 
     const onApplePressed = () =>{
-        console.warn("Pressed on Apple")
+        console.warn("Pressed on Apple");
     }
     const onCreateOnePressed = () =>{
-        console.warn("Pressed on Create One")
+        console.warn("Pressed on Create One");
+        navigation.navigate('SignUp');
     }
     
   return (
